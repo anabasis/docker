@@ -2,7 +2,8 @@ export SPLUNK_CONTAINER_NAME="splunkpublic"
 
 docker \
   run \
-  --detach \
+  --interactive \
+  --tty \
   --volume /Users/chojunseung/Workings/Containers/splunk/splunk_repo/splunk_etc:/opt/splunk/etc \
   --name ${SPLUNK_CONTAINER_NAME} \
   --hostname splunkpublic.localdomain \

@@ -56,8 +56,8 @@ Splunk Enterprise
 
   Usage:
 
-    docker run -it splunk/splunk:7.1.2
-    docker run --env SPLUNK_START_ARGS="--accept-license" splunk/splunk:7.1.2
+    docker run -it splunk/splunk:7.1.4
+    docker run --env SPLUNK_START_ARGS="--accept-license" splunk/splunk:7.1.4
 
 EOF
     exit 1
@@ -119,6 +119,8 @@ EOF
       sudo -HEu ${SPLUNK_USER} sh -c "${SPLUNK_HOME}/bin/splunk enable listen ${SPLUNK_ENABLE_LISTEN} -auth admin:changeme ${SPLUNK_ENABLE_LISTEN_ARGS}"
     fi
 
+
+    echo SPLUNK_FORWARD_SERVER : ${SPLUNK_FORWARD_SERVER}
     # Setup forwarding server
     # http://docs.splunk.com/Documentation/Splunk/latest/Forwarding/Deployanixdfmanually
     if [[ -n ${SPLUNK_FORWARD_SERVER} ]]; then
@@ -136,6 +138,7 @@ EOF
       fi
     done
 
+    echo SPLUNK_ADD : ${SPLUNK_ADD}
     # Setup monitoring
     # http://docs.splunk.com/Documentation/Splunk/latest/Data/MonitorfilesanddirectoriesusingtheCLI
     # http://docs.splunk.com/Documentation/Splunk/latest/Data/Monitornetworkports
@@ -153,6 +156,7 @@ EOF
       fi
     done
 
+    echo SPLUNK_CMD : ${SPLUNK_CMD}
     # Execute anything
     if [[ -n ${SPLUNK_CMD} ]]; then
         echo sudo -HEu ${SPLUNK_USER} sh -c "${SPLUNK_HOME}/bin/splunk ${SPLUNK_CMD}"

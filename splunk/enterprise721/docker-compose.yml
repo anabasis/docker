@@ -16,7 +16,7 @@ services:
   splunkenterprise:
     #build: .
     hostname: splunkenterprise
-    image: splunk/splunk:7.1.2
+    image: splunk/splunk:7.2.1
     environment:
       SPLUNK_START_ARGS: --accept-license
       SPLUNK_ENABLE_LISTEN: 9997

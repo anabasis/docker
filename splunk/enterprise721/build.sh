@@ -4,7 +4,7 @@ if [ -z $CURRENT ]; then
 fi
 echo CURRENT
 
-docker build --no-cache=true -t splunk/splunk:7.1.4 .
-#docker tag splunk/splunk:7.1.2 splunk/splunk:latest
-#docker tag splunk/splunk:7.1.2 registry.splunk.com/splunk/splunk:latest
-#docker tag splunk/splunk:7.1.2 registry.splunk.com/splunk/splunk:7.1.2
+docker build --no-cache=true -t splunk/splunk:7.2.1 .
+#docker tag splunk/splunk:7.2.1 splunk/splunk:latest
+#docker tag splunk/splunk:7.2.1 registry.splunk.com/splunk/splunk:latest
+#docker tag splunk/splunk:7.2.1 registry.splunk.com/splunk/splunk:7.2.1

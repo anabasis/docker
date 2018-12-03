@@ -1,13 +1,13 @@
-export SPLUNK_CONTAINER_NAME="splunkpublic"
+export SPLUNK_CONTAINER_NAME="splunk721"
 
 docker \
   run \
   --detach \
-  --volume /Users/chojunseung/Workings/Repos/git/splunk_app:/opt/splunk/etc/apps \
+  --volume /Users/chojunseung/Workings/Repos/git/splunk721_app:/opt/splunk/etc/apps \
   --name ${SPLUNK_CONTAINER_NAME} \
-  --hostname splunkpublic.localdomain \
-  --env "SPLUNK_START_ARGS=--accept-license  --seed-passwd welcome!1 " \
+  --hostname splunk721.localdomain \
   --env "SPLUNK_USER=root" \
-  --publish 18000:8000 \
-  --publish 18089:8089 \
-  splunk/splunk:7.1.2;
+  --env "SPLUNK_START_ARGS=--accept-license  --seed-passwd welcome!1 " \
+  --publish 28000:8000 \
+  --publish 28089:8089 \
+  splunk/splunk:7.2.1;

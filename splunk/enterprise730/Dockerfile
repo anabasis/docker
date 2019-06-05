@@ -2,10 +2,10 @@ FROM centos:7.3.1611
 MAINTAINER jscho <jscho@time-gate.com>
 
 ENV SPLUNK_PRODUCT splunk
-ENV SPLUNK_VERSION 7.2.3
-ENV SPLUNK_BUILD 06d57c595b80
+ENV SPLUNK_VERSION 7.3.0
+ENV SPLUNK_BUILD 657388c7a488
 ENV SPLUNK_FILENAME splunk-${SPLUNK_VERSION}-${SPLUNK_BUILD}-Linux-x86_64.tgz
-#wget -O splunk-7.2.3-06d57c595b80-Linux-x86_64.tgz 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=7.2.3&product=splunk&filename=splunk-7.2.3-06d57c595b80-Linux-x86_64.tgz&wget=true'
+##wget -O splunk-7.3.0-657388c7a488-Linux-x86_64.tgz 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=7.3.0&product=splunk&filename=splunk-7.3.0-657388c7a488-Linux-x86_64.tgz&wget=true'
 
 ENV SPLUNK_HOME /opt/splunk
 ENV SPLUNK_GROUP root
@@ -27,7 +27,7 @@ WORKDIR /opt
 RUN cd /opt
 #RUN yum install -y wget sudo tar
 RUN yum install -y wget sudo tar net-tools \
-    &&  wget -O splunk-7.2.3-06d57c595b80-Linux-x86_64.tgz 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=7.2.3&product=splunk&filename=splunk-7.2.3-06d57c595b80-Linux-x86_64.tgz&wget=true'
+    &&  wget -O splunk-7.3.0-657388c7a488-Linux-x86_64.tgz 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=7.3.0&product=splunk&filename=splunk-7.3.0-657388c7a488-Linux-x86_64.tgz&wget=true'
 
 #COPY ${SPLUNK_FILENAME} /opt/${SPLUNK_FILENAME}
 RUN chmod +x /opt/${SPLUNK_FILENAME}

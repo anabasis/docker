@@ -1,10 +1,11 @@
-FROM centos:latest
-MAINTAINER jscho <jscho@time-gate.com>
+FROM ubuntu:latest
+LABEL jscho <jscho@time-gate.com>
 
 ENV SPLUNK_PRODUCT splunk
-ENV SPLUNK_VERSION 8.1.3
-ENV SPLUNK_BUILD 63079c59e632
+ENV SPLUNK_VERSION 8.2.1
+ENV SPLUNK_BUILD ddff1c41e5cf
 ENV SPLUNK_FILENAME splunk-$SPLUNK_VERSION-$SPLUNK_BUILD-Linux-x86_64.tgz
+# wget -O splunk-8.2.1-ddff1c41e5cf-Linux-x86_64.tgz 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=8.2.1&product=splunk&filename=splunk-8.2.1-ddff1c41e5cf-Linux-x86_64.tgz&wget=true'
 
 ENV SPLUNK_HOME /opt/splunk
 ENV SPLUNK_GROUP root

@@ -17,7 +17,6 @@ RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_6
     echo "conda activate base" >> ~/.bashrc
 
 # Install basic frameworks
-RUN conda update all
 RUN conda install -n base pytorch cpuonly -c pytorch && \
     conda install -c anaconda tensorflow
 RUN conda install -n base nb_conda waitress datashader && \

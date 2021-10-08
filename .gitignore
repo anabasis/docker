@@ -1,2 +1,6 @@
 .DS_Store
 Splunk.License
+
+# Splunk
+Splunk*.License
+splunk-*-*-Linux-x86_64.tgz

@@ -4,5 +4,5 @@ if [ -z $CURRENT ]; then
 fi
 echo CURRENT
 
-docker build --no-cache=true -t splunk/splunk:latest ./
+docker build --platform=linux/amd64 --no-cache=true -t splunk/splunk:latest ./
 ## --no-cache 캐쉬없이 재빌드, -t 태그, ./ Dockerfile 위치

@@ -4,6 +4,7 @@ docker \
   run \
   --interactive \
   --tty \
+  --platform=linux/amd64 \
   --name ${SPLUNK_CONTAINER_NAME} \
   --hostname splunk.localdomain \
   --env "SPLUNK_USER=root" \

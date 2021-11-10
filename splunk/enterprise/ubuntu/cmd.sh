@@ -1,1 +1,1 @@
-docker exec -i -t splunk/splunk:latest /bin/bash
+docker exec -i -t splunk /bin/bash

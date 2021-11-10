@@ -1,11 +1,11 @@
-export SPLUNK_CONTAINER_NAME="splunkpublic"
+export SPLUNK_CONTAINER_NAME="splunk"
 
 docker \
   run \
   --detach \
-  --volume /Users/chojunseung/Workings/Repos/git/splunk_app:/opt/splunk/etc/apps \
+  --platform linux/x86_64  \
   --name ${SPLUNK_CONTAINER_NAME} \
-  --hostname splunkpublic.localdomain \
+  --hostname splunk.localdomain \
   --env "SPLUNK_USER=root" \
   --env "SPLUNK_START_ARGS=--accept-license  --seed-passwd welcome!1 " \
   --publish 18000:8000 \

@@ -66,3 +66,20 @@ EXPOSE 8000/tcp 8089/tcp 8191/tcp 9997/tcp 1514 8088/tcp
 
 #ENTRYPOINT ["/sbin/entrypoint.sh"]
 #CMD ["start-service"]
+
+#./qemu-system-aarch64 \
+#  -serial stdio \
+#  -M virt,highmem=off \
+#  -accel hvf \
+#  -cpu cortex-a72 \
+#  -smp 4 \
+#  -m 4096 \
+#  -bios /path/to/QEMU_EFI.fd \
+#  -device virtio-gpu-pci \
+#  -display default,show-cursor=on \
+#  -device qemu-xhci \
+#  -device usb-kbd \
+#  -device usb-tablet \
+#  -device intel-hda \
+#  -device hda-duplex \
+#  -drive file=/path/to/Ubuntu.qcow2,if=virtio,cache=writethrough

@@ -1,1 +1,1 @@
-docker stop postgres964
+docker stop postgresql

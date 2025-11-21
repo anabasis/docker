@@ -10,7 +10,7 @@ docker \
   --env POSTGRES_DB=${POSTGRES_DB} \
   --env POSTGRES_USER=${POSTGRES_USER} \
   --env POSTGRES_PASSWORD=${POSTGRES_PASSWORD} \
-  --volume /Users/chojunseung/Working/Containers/postgresql:/var/lib/postgresql/data \
+  --volume ~/Working/Containers/postgresql:/var/lib/postgresql \
   --name ${POSTGRES_CONTAINER_NAME} \
   --hostname postgresql.localdomain \
   --publish 5432:5432 \

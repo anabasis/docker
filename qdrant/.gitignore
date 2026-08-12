@@ -1,0 +1,53 @@
+# -------------------------
+# Docker / Docker Compose
+# -------------------------
+# 컨테이너 로그
+*.log
+logs/
+docker-logs/
+
+# Docker 빌드 캐시
+**/.docker
+**/.dockerignore
+
+# Docker Compose override 파일
+docker-compose.override.yml
+docker-compose.override.yaml
+
+# 환경 변수 파일
+.env
+.env.*
+!.env.example
+
+# -------------------------
+# Qdrant (로컬 스토리지)
+# -------------------------
+qdrant_storage/
+**/qdrant_storage/
+qdrant_data/
+**/qdrant_data/
+
+# -------------------------
+# 일반 개발 환경
+# -------------------------
+node_modules/
+dist/
+build/
+__pycache__/
+*.pyc
+
+# Python venv
+venv/
+.env/
+.venv/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.iml

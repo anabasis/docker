@@ -1,0 +1,64 @@
+# -------------------------
+# Docker / Docker Compose
+# -------------------------
+# 컨테이너 로그
+*.log
+logs/
+docker-logs/
+
+# Docker 빌드 캐시
+**/.docker
+**/.dockerignore
+
+# Docker Compose override 파일
+docker-compose.override.yml
+docker-compose.override.yaml
+
+# 환경 변수 파일
+.env
+.env.*
+!.env.example
+
+# -------------------------
+# Milvus (로컬 스토리지)
+# -------------------------
+# Standalone 모드 데이터 저장 위치
+volumes/
+volumes/milvus/
+milvus_data/
+**/milvus_data/
+**/volumes/milvus/
+
+# Milvus Lite (파일 기반)
+*.db
+*.milvus
+
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# -------------------------
+# Node (프론트엔드 포함 시)
+# -------------------------
+node_modules/
+dist/
+build/
+
+# -------------------------
+# macOS
+# -------------------------
+.DS_Store
+
+# -------------------------
+# IDE
+# -------------------------
+.vscode/
+.idea/
+*.iml
